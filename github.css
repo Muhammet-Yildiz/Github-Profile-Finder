@@ -1,0 +1,570 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    background-color: rgb(27, 27, 27);
+    outline: 0;
+}
+
+
+/* tarayıcıda ölçeklendirmeyi 67% den ayarlayın oduruma
+ göre tasarlandı */
+
+:root {
+    --first: rgb(207, 170, 4);
+    --lightgray: rgb(184, 184, 184)
+}
+
+body {
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+.Employee {
+    width: 100%;
+    height: 100%;
+}
+
+.head {
+    margin-top: 6rem;
+    width: 100%;
+    position: relative;
+}
+
+.head .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.tp_lg {
+    display: flex;
+    align-items: center;
+    font-family: 'Bitter', serif;
+    color: var(--first);
+}
+
+.tp_lg svg {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.tp_lg h1 {
+    font-weight: bold;
+    padding-top: 8px;
+    font-size: 4.6rem;
+    text-align: center;
+    line-height: 98px;
+    letter-spacing: 3px;
+    z-index: 102;
+}
+
+.logo p {
+    color: var(--first);
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    font-family: 'Bitter', serif;
+}
+
+.head h2 {
+    width: 650px;
+    margin: 2rem auto;
+    text-align: center;
+    color: var(--lightgray);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    line-height: 40px;
+    font-family: 'Bitter', serif;
+}
+
+.search-form {
+    width: 670px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 3rem;
+    padding-left: 10px;
+    justify-content: center;
+    z-index: 99;
+}
+
+.search-form input[type="search"] {
+    border: none;
+    padding: 1rem 0.6rem;
+    padding-left: 1.3rem;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.4rem;
+    width: 630px;
+    letter-spacing: 2px;
+    margin-right: 2.5rem;
+    z-index: 99;
+    border-bottom: 3px solid var(--first);
+}
+
+.search-form .search-button {
+    color: rgb(197, 197, 197);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    border: var(--lightgray) solid 3px;
+    width: 95px;
+    font-size: 1.3rem;
+    border-radius: 3px;
+    transition: 350ms ease;
+    z-index: 99;
+}
+
+.search-form .search-button:hover {
+    background-color: rgb(192, 192, 192);
+    color: black;
+}
+
+.alert {
+    width: 850px;
+    margin: 2rem auto;
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------- */
+
+
+/* SVG LER  */
+
+svg.bi-moon-fill {
+    position: fixed;
+    top: 35px;
+    left: 45px;
+    color: rgb(255, 164, 164);
+    z-index: 88;
+    width: 65px;
+    height: 65px;
+    opacity: 0.3;
+}
+
+svg.bi-moon-fill2 {
+    position: fixed;
+    bottom: 35px;
+    right: 45px;
+    color: rgb(255, 164, 164);
+    z-index: 88;
+    width: 65px;
+    height: 65px;
+    opacity: 0.3;
+    transform: rotate(85deg);
+}
+
+.squareSvg {
+    position: fixed;
+    top: 5vh;
+    right: 25vw;
+    width: 125px;
+    opacity: 0.8;
+    height: 125px;
+}
+
+.squareSvg2 {
+    position: fixed;
+    bottom: 8vh;
+    left: 25vw;
+    z-index: 1;
+    width: 125px;
+    opacity: 0.8;
+    height: 125px;
+    transform: rotate(9deg);
+    opacity: 0.2;
+}
+
+.bi-star-fill {
+    position: fixed;
+    top: 285px;
+    right: 20vw;
+    width: 65px;
+    height: 65px;
+    z-index: 11;
+    opacity: 0.3;
+    color: red;
+    transform: rotate(190deg);
+}
+
+.bi-star-fill2 {
+    position: fixed;
+    top: 95px;
+    left: 415px;
+    width: 65px;
+    height: 65px;
+    z-index: 11;
+    opacity: 0.3;
+    color: green;
+    transform: rotate(-45deg);
+}
+
+.githubSvg {
+    position: fixed;
+    top: 275px;
+    left: 20vw;
+    width: 285px;
+    height: 355px;
+    z-index: 11;
+    opacity: 0.1;
+}
+
+.rectangleSvg {
+    position: fixed;
+    bottom: 25px;
+    left: 85px;
+    width: 175px;
+    height: 185px;
+    z-index: 11;
+    transform: rotate(285deg);
+    opacity: 0.1;
+}
+
+.circleSvg {
+    position: fixed;
+    bottom: 75px;
+    right: 685px;
+    width: 175px;
+    height: 185px;
+    z-index: 11;
+    transform: rotate(285deg);
+    opacity: 0.1;
+}
+
+.circleSvg2 {
+    position: fixed;
+    top: 365px;
+    right: 85px;
+    width: 75px;
+    height: 75px;
+    z-index: 11;
+    transform: rotate(285deg);
+    opacity: 0.1;
+}
+
+.halfcircleSvg,
+.halfcircleSvg2 {
+    position: fixed;
+    top: 565px;
+    right: 485px;
+    width: 105px;
+    height: 105px;
+    z-index: 11;
+    transform: rotate(285deg);
+    opacity: 0.3;
+}
+
+.halfcircleSvg2 {
+    top: 245px;
+    left: 142px;
+    transform: rotate(205deg);
+    opacity: 0.1;
+}
+
+.bi-droplet-fill {
+    position: fixed;
+    bottom: 30vh;
+    left: 45vw;
+    width: 75px;
+    height: 75px;
+    z-index: 11;
+    transform: rotate(-30deg);
+    opacity: 0.2;
+    color: greenyellow;
+    background-color: transparent;
+}
+
+.bi-heptagon-fill {
+    position: fixed;
+    top: 30vh;
+    left: 40vw;
+    width: 75px;
+    height: 75px;
+    z-index: 11;
+    transform: rotate(-30deg);
+    opacity: 0.2;
+    background-color: transparent;
+    color: greenyellow;
+}
+
+.bi-exclude {
+    position: fixed;
+    top: 10px;
+    right: 80px;
+    width: 75px;
+    height: 75px;
+    z-index: 11;
+    transform: rotate(-30deg);
+    opacity: 0.2;
+    background-color: transparent;
+    color: rgb(47, 255, 238);
+}
+
+.bi-exclude2 {
+    position: fixed;
+    bottom: 410px;
+    left: 280px;
+    width: 75px;
+    height: 75px;
+    z-index: 11;
+    transform: rotate(-30deg);
+    opacity: 0.1;
+    background-color: transparent;
+    color: rgb(54, 255, 47);
+    transform: rotate(90deg);
+}
+
+.bi-lightning-fill {
+    position: fixed;
+    top: 410px;
+    left: 280px;
+    width: 75px;
+    height: 75px;
+    z-index: 11;
+    transform: rotate(-30deg);
+    opacity: 0.1;
+    background-color: transparent;
+    color: goldenrod;
+    transform: rotate(90deg);
+}
+
+.bi-lightning-fill2 {
+    bottom: 275px;
+    right: 115px;
+    position: fixed;
+    z-index: 98;
+    width: 130px;
+    height: 130px;
+    color: rgb(218, 32, 110);
+    opacity: 0.3;
+    transform: rotate(5deg);
+}
+
+.bi-cloud-fill {
+    bottom: 15px;
+    left: 44vw;
+    position: fixed;
+    z-index: 98;
+    width: 130px;
+    height: 130px;
+    color: rgb(218, 32, 110);
+    opacity: 0.3;
+    transform: rotate(5deg);
+}
+
+
+/* ---------------------------------------- */
+
+.profile {
+    color: white;
+    width: 850px;
+    margin: 6rem auto 0 auto;
+    z-index: 99;
+}
+
+.profile .user-information {
+    display: flex;
+    position: relative;
+}
+
+.user-information .user-img img {
+    width: 240px;
+    height: 240px;
+    margin-right: 2vw;
+    border: var(--first) solid 9px;
+    border-radius: 3px;
+    padding: 2rem;
+}
+
+.user-follow-city-email {
+    width: 500px;
+    padding-top: 1rem;
+}
+
+.user-follow {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.user-follow li {
+    width: 30%;
+    display: flex;
+    font-size: 0.8rem;
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    border-radius: 6px;
+    background-color: var(--first);
+}
+
+.user-follow li span {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.user-city-email {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.user-city-email li {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+li svg {
+    color: var(--lightgray);
+}
+
+.user-city-email li p {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--lightgray);
+}
+
+.user-name-bio {
+    padding-top: 1rem;
+}
+
+.user-name-bio h2 {
+    font-size: 1.7rem;
+}
+
+.user-name-bio p {
+    color: var(--first);
+    font-size: 1.3rem;
+}
+
+#repos {
+    width: 850px;
+    height: auto;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+    margin: 3rem auto;
+    position: relative;
+}
+
+.page-heading {
+    width: 100%;
+    margin: 0 auto;
+    color: var(--lightgray);
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-family: 'Acme', sans-serif;
+    display: none;
+}
+
+#repos .repo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+}
+
+#repos li {
+    margin-right: 1.5rem;
+}
+
+#repos li a {
+    display: inline-block;
+    line-height: 30px;
+    width: 180px;
+    height: auto;
+    margin-right: 2rem;
+    color: var(--first);
+}
+
+#repos li.repo-stars {
+    background-color: var(--first);
+    color: white;
+    padding: 0.9rem 1.4rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: 2.6rem;
+}
+
+#repos li.repo-forks {
+    background-color: var(--lightgray);
+    color: white;
+    padding: 0.9rem 1.4rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#repos li span {
+    background-color: white;
+    padding: 0.3rem 0.8rem;
+    color: black;
+    border-radius: 5px;
+    margin-left: 0.9rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+}
+
+
+/* -------------------------- */
+
+#last-search {
+    width: 100%;
+    height: auto;
+    font-size: 1.1rem;
+    width: 850px;
+    margin: 2rem auto;
+    display: none;
+    z-index: 152;
+}
+
+.last-search-heading {
+    width: 850px;
+    margin: 2rem auto;
+    color: var(--lightgray);
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-family: 'Acme', sans-serif;
+}
+
+.last_search_value {
+    color: var(--first);
+    padding: 0.4rem 1rem;
+}
+
+button#clear-last-users {
+    border: var(--first) solid 2px;
+    color: var(--lightgray);
+    margin: 3rem auto;
+    padding: 1rem;
+    font-weight: bold;
+    transition: 350ms ease;
+}
+
+button#clear-last-users:hover {
+    background-color: var(--first);
+    color: black;
+}
