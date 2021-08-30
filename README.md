@@ -1,7 +1,5 @@
 # Github-Profile-Finder
 
--------------
--------------
 
 ![GithubProfileFinderPhoto01](https://user-images.githubusercontent.com/72153125/123539524-e1245480-d742-11eb-9b25-3c284a7f1b37.png)
 
